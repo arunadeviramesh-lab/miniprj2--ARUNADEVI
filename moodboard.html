@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood Board</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #444;
+    }
+    button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 8px;
+      background: orchid;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: mediumorchid;
+    }
+    .grid {
+      columns: 3 200px;
+      column-gap: 15px;
+    }
+    .card {
+      background: white;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      break-inside: avoid;
+    }
+    textarea {
+      width: 100%;
+      border: none;
+      resize: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    if (!localStorage.getItem("user")) {
+      window.location.href = "index.html"; 
+
+  </script>
+
+  <header>
+    <h2>My Mood Board ✨</h2>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <div class="grid">
+    <div class="card"><textarea placeholder="Soft girl energy 🌸"></textarea></div>
+    <div class="card"><textarea placeholder="Midnight rain vibes 🌙"></textarea></div>
+    <div class="card"><textarea placeholder="Dream life 💭"></textarea></div>
+    <div class="card"><textarea placeholder="Pinterest thoughts 🖤"></textarea></div>
+  </div>
+
+  <script>
+    function logout() {
+      window.location.href = "logout.html"; 
+    }
+  </script>
+
+</body>
+</html>
