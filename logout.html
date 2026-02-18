@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logout</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: linear-gradient(135deg, #ffe6f0, #e6f2ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      width: 320px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: lavender;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: mediumorchid;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Logged Out 💗</h2>
+    <p>See you again soon</p>
+    <button onclick="goBack()">Sign In Again</button>
+  </div>
+
+  <script>
+    localStorage.removeItem("user");
+
+    function goBack() {
+      window.location.href = "index.html"; 
+    }
+  </script>
+
+</body>
+</html>
